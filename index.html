@@ -42,7 +42,7 @@ text {
 <script>
 
 // get the data
-d3.csv("force.csv", function(error, links) {
+d3.csv("netscience.csv", function(error, links) {
 
 var nodes = {};
 
@@ -62,7 +62,7 @@ var force = d3.layout.force()
     .nodes(d3.values(nodes))
     .links(links)
     .size([width, height])
-    .linkDistance(80)
+    .linkDistance(40)
     .charge(-100)
     .on("tick", tick)
     .start();
