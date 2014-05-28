@@ -129,9 +129,18 @@ node.append("circle")
         if (d.st === 'source') {
             r = d.weight;
         } else {
-            r = 1
+            r = 3;
         }
         return r;
+    })
+    .attr("style", function (d) {
+        var fill = '#ccc';
+        if (d.st === 'source') {
+            fill = 'blue';
+        } else {
+            fill = 'red';
+        }
+        return 'fill: ' + fill;
     });
 
 // add the curvy lines
